@@ -8,19 +8,22 @@
 
 .main{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
 }
 
 
 .heading {
     background-color: pink;
-    justify-items: center;
+    
 }
 
 .display-screen {
     grid-column: 1/5;
     grid-row: 1/2;
     background-color: #F1FAEE;
+    height: 80px;
 }
 
 .button-zero {
@@ -28,8 +31,8 @@
 }
 
 .button-style {
-    padding: 2%;
-    border-radius: 6px;
+    height: 60px;
+    border: none;
 }
 
 .color-1 {
@@ -42,6 +45,7 @@
 
 .color-3 {
     background-color: #e63946;
+    grid-column: 1/4;
 }
 
 body {
@@ -54,8 +58,6 @@ body {
     padding : 10px;
     height: 400px;
     background-color: #457B9D;
-}
-
-.flexy-class {
-    display: flex;
+    box-shadow: 6px 6px 3px grey;
+    align-content: center;
 }
