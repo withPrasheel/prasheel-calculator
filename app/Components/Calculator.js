@@ -10,6 +10,27 @@ export default  class Calculator extends React.Component {
     this.clearAll = this.clearAll.bind(this);
     this.updateState = this.updateState.bind(this);
     this.updateOpertor = this.updateOperator.bind(this);
+    this.backspace=this.backspace.bind(this);
+    }
+
+    backspace(){
+        if(this.state.operator=='')
+        {
+            let value0 = this.state.value[0]
+            let len = value0.length
+            this.setState(({value})=>({
+                value: [value0.substring(0,len-1),value[1]]
+            }))
+        }
+        else
+        {
+            let value1 = this.state.value[1]
+            let len = value1.length
+             this.setState(({value})=>({
+                 value: [value[0],value1.substring(0,len-1)]
+            }))
+        }
+        
     }
 
     clearAll() {
@@ -85,8 +106,10 @@ export default  class Calculator extends React.Component {
             
                 <div className="main-calc">
                     <div className="display-screen">{this.state.value[0]} {this.state.operator} {this.state.value[1]}</div>
-                    <button className="button-style color-3" 
+                    <button className="button-style color-3 clear" 
                         onClick={this.clearAll}>C</button>
+                    <button className="button-style color-3 backspace" 
+                        onClick={this.backspace}>&#8592;</button>
                     <button className="button-style color-2"
                         onClick={()=>(this.updateOperator('/'))}>/</button>
                     <button className="button-style color-1" 
