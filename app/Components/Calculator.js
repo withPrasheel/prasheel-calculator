@@ -31,19 +31,19 @@ export default  class Calculator extends React.Component {
         switch(this.state.operator)
         {
             case '+': this.setState(({value})=>({
-                value: [parseFloat(value[0])+parseFloat(value[1]),0]
+                value: [(parseFloat(value[0])+parseFloat(value[1])).toString(),'']
             }))
             break;
             case '-': this.setState(({value})=>({
-                value: [parseFloat(value[0])-parseFloat(value[1]),0]
+                value: [(parseFloat(value[0])-parseFloat(value[1])).toString(),'']
             }))
             break;
             case '*': this.setState(({value})=>({
-                value: [parseFloat(value[0])*parseFloat(value[1]),0]
+                value: [(parseFloat(value[0])*parseFloat(value[1]).toString()),'']
             }))
             break;
             case '/': this.setState(({value})=>({
-                value: [parseFloat(value[0])/parseFloat(value[1]),0]
+                value: [(parseFloat(value[0])/parseFloat(value[1])).toString(),'']
             }))
             break;
         }
