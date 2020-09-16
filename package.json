@@ -4,7 +4,8 @@
   "description": "This in an implementation of a basic calculator",
   "main": "index.js",
   "scripts": {
-    "build": "webpack-dev-server"
+    "build": "webpack-dev-server",
+    "prod": "webpack --mode production"
   },
   "babel": {
     "presets": [
